@@ -3,6 +3,8 @@ package spring.microservices.multiplication.service;
 import spring.microservices.multiplication.domain.Multiplication;
 import spring.microservices.multiplication.domain.MultiplicationResultAttempt;
 
+import java.util.List;
+
 public interface MultiplicationService {
     /**
      * Creates a Multiplication object with two randomlygenerated factors
@@ -19,4 +21,6 @@ public interface MultiplicationService {
      */
     boolean checkAttempt(final MultiplicationResultAttempt
                                  resultAttempt);
+
+    List<MultiplicationResultAttempt> getStatsForUser(String userAlias);
 }
